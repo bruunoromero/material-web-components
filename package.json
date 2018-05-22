@@ -1,5 +1,5 @@
 {
-  "name": "my-component",
+  "name": "material-web-components",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "module": "dist/esm/index.js",
@@ -17,7 +17,13 @@
     "test": "jest",
     "test.watch": "jest --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@material/button": "^0.35.0",
+    "@material/ripple": "^0.35.0",
+    "@material/theme": "^0.35.0",
+    "@material/top-app-bar": "^0.35.2",
+    "@stencil/sass": "^0.0.5"
+  },
   "devDependencies": {
     "@stencil/core": "^0.9.1",
     "@stencil/dev-server": "latest",

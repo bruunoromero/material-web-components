@@ -1,17 +1,27 @@
+const path = require("path");
+const sass = require("@stencil/sass");
+
 exports.config = {
-  namespace: 'mycomponent',
-  outputTargets:[
-    { 
-      type: 'dist' 
+  namespace: "MWC",
+  plugins: [
+    sass({
+      includePaths: ["node_modules", "node_modules/@material/*"].map(d =>
+        path.join(__dirname, d)
+      )
+    })
+  ],
+  outputTargets: [
+    {
+      type: "dist"
     },
-    { 
-      type: 'www',
+    {
+      type: "www",
       serviceWorker: false
     }
   ]
 };
 
 exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
-}
+  root: "www",
+  watchGlob: "**/**"
+};

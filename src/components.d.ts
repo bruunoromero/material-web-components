@@ -27,33 +27,111 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface MwcAppBar {
+
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLMwcAppBarElement extends StencilComponents.MwcAppBar, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLMwcAppBarElement: {
+    prototype: HTMLMwcAppBarElement;
+    new (): HTMLMwcAppBarElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'mwc-app-bar': HTMLMwcAppBarElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'mwc-app-bar': HTMLMwcAppBarElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'mwc-app-bar': JSXElements.MwcAppBarAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface MwcAppBarAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcApp {
+      'background': string;
+      'primary': string;
+      'secondary': string;
+      'surface': string;
+      'textOnprimary': string;
+      'textOnsecondary': string;
+      'textOnsurface': string;
+    }
+  }
+
+  interface HTMLMwcAppElement extends StencilComponents.MwcApp, HTMLStencilElement {}
+
+  var HTMLMwcAppElement: {
+    prototype: HTMLMwcAppElement;
+    new (): HTMLMwcAppElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-app': HTMLMwcAppElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-app': HTMLMwcAppElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-app': JSXElements.MwcAppAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcAppAttributes extends HTMLAttributes {
+      'background'?: string;
+      'primary'?: string;
+      'secondary'?: string;
+      'surface'?: string;
+      'textOnprimary'?: string;
+      'textOnsecondary'?: string;
+      'textOnsurface'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcButton {
+      'ripple': boolean;
+      'tag': string;
+    }
+  }
+
+  interface HTMLMwcButtonElement extends StencilComponents.MwcButton, HTMLStencilElement {}
+
+  var HTMLMwcButtonElement: {
+    prototype: HTMLMwcButtonElement;
+    new (): HTMLMwcButtonElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-button': HTMLMwcButtonElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-button': HTMLMwcButtonElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-button': JSXElements.MwcButtonAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcButtonAttributes extends HTMLAttributes {
+      'ripple'?: boolean;
+      'tag'?: string;
     }
   }
 }
