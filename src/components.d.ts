@@ -62,12 +62,12 @@ declare global {
   namespace StencilComponents {
     interface MwcApp {
       'background': string;
+      'onPrimary': string;
+      'onSecondary': string;
+      'onSurface': string;
       'primary': string;
       'secondary': string;
       'surface': string;
-      'textOnprimary': string;
-      'textOnsecondary': string;
-      'textOnsurface': string;
     }
   }
 
@@ -91,12 +91,12 @@ declare global {
   namespace JSXElements {
     export interface MwcAppAttributes extends HTMLAttributes {
       'background'?: string;
+      'onPrimary'?: string;
+      'onSecondary'?: string;
+      'onSurface'?: string;
       'primary'?: string;
       'secondary'?: string;
       'surface'?: string;
-      'textOnprimary'?: string;
-      'textOnsecondary'?: string;
-      'textOnsurface'?: string;
     }
   }
 }
@@ -106,8 +106,14 @@ declare global {
 
   namespace StencilComponents {
     interface MwcButton {
+      'dense': boolean;
+      'disabled': boolean;
+      'href': string;
+      'outlined': boolean;
+      'raised': boolean;
       'ripple': boolean;
       'tag': string;
+      'unelevated': boolean;
     }
   }
 
@@ -130,8 +136,209 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcButtonAttributes extends HTMLAttributes {
+      'dense'?: boolean;
+      'disabled'?: boolean;
+      'href'?: string;
+      'outlined'?: boolean;
+      'raised'?: boolean;
       'ripple'?: boolean;
       'tag'?: string;
+      'unelevated'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcCardActions {
+
+    }
+  }
+
+  interface HTMLMwcCardActionsElement extends StencilComponents.MwcCardActions, HTMLStencilElement {}
+
+  var HTMLMwcCardActionsElement: {
+    prototype: HTMLMwcCardActionsElement;
+    new (): HTMLMwcCardActionsElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-card-actions': HTMLMwcCardActionsElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-card-actions': HTMLMwcCardActionsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-card-actions': JSXElements.MwcCardActionsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardActionsAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcCardButtons {
+
+    }
+  }
+
+  interface HTMLMwcCardButtonsElement extends StencilComponents.MwcCardButtons, HTMLStencilElement {}
+
+  var HTMLMwcCardButtonsElement: {
+    prototype: HTMLMwcCardButtonsElement;
+    new (): HTMLMwcCardButtonsElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-card-buttons': HTMLMwcCardButtonsElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-card-buttons': HTMLMwcCardButtonsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-card-buttons': JSXElements.MwcCardButtonsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardButtonsAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcCard {
+      'outlined': boolean;
+    }
+  }
+
+  interface HTMLMwcCardElement extends StencilComponents.MwcCard, HTMLStencilElement {}
+
+  var HTMLMwcCardElement: {
+    prototype: HTMLMwcCardElement;
+    new (): HTMLMwcCardElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-card': HTMLMwcCardElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-card': HTMLMwcCardElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-card': JSXElements.MwcCardAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardAttributes extends HTMLAttributes {
+      'outlined'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcFab {
+      'disabled': boolean;
+      'exited': boolean;
+      'href': string;
+      'mini': boolean;
+      'ripple': boolean;
+      'tag': string;
+    }
+  }
+
+  interface HTMLMwcFabElement extends StencilComponents.MwcFab, HTMLStencilElement {}
+
+  var HTMLMwcFabElement: {
+    prototype: HTMLMwcFabElement;
+    new (): HTMLMwcFabElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-fab': HTMLMwcFabElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-fab': HTMLMwcFabElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-fab': JSXElements.MwcFabAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcFabAttributes extends HTMLAttributes {
+      'disabled'?: boolean;
+      'exited'?: boolean;
+      'href'?: string;
+      'mini'?: boolean;
+      'ripple'?: boolean;
+      'tag'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcTextField {
+      'box': boolean;
+      'dense': boolean;
+      'disabled': boolean;
+      'fullWidth': boolean;
+      'id': string;
+      'label': string;
+      'outlined': boolean;
+      'placeholder': string;
+      'ripple': boolean;
+      'tag': string;
+      'type': string;
+    }
+  }
+
+  interface HTMLMwcTextFieldElement extends StencilComponents.MwcTextField, HTMLStencilElement {}
+
+  var HTMLMwcTextFieldElement: {
+    prototype: HTMLMwcTextFieldElement;
+    new (): HTMLMwcTextFieldElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-text-field': HTMLMwcTextFieldElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-text-field': HTMLMwcTextFieldElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-text-field': JSXElements.MwcTextFieldAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcTextFieldAttributes extends HTMLAttributes {
+      'box'?: boolean;
+      'dense'?: boolean;
+      'disabled'?: boolean;
+      'fullWidth'?: boolean;
+      'id'?: string;
+      'label'?: string;
+      'outlined'?: boolean;
+      'placeholder'?: string;
+      'ripple'?: boolean;
+      'tag'?: string;
+      'type'?: string;
     }
   }
 }

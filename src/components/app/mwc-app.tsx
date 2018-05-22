@@ -1,56 +1,52 @@
-import { Component, Prop } from "@stencil/core";
+import { Component, Prop, Element } from "@stencil/core";
+
+import { doIfExists } from "../../utils/context";
+import { camelCaseToDash } from "../../utils/strings";
 
 @Component({
   tag: "mwc-app",
   styleUrl: "mwc-app.scss"
 })
-export class MyComponent {
+export class App {
   @Prop() surface: string;
   @Prop() primary: string;
   @Prop() secondary: string;
+  @Prop() onSurface: string;
+  @Prop() onPrimary: string;
   @Prop() background: string;
-  @Prop() textOnsurface: string;
-  @Prop() textOnprimary: string;
-  @Prop() textOnsecondary: string;
+  @Prop() onSecondary: string;
+
+  @Element() el: HTMLElement;
 
   componentWillLoad() {
     this.setCssVariables();
   }
 
-  componentDidLoad() {
-    document.querySelector("body").classList.add("mdc-typography");
+  hostData() {
+    return {
+      class: "mdc-typography"
+    };
   }
 
   setCssVariables() {
     const doc = document.documentElement;
 
-    if (this.surface) {
-      doc.style.setProperty("--mdc-theme-surface", this.surface);
-    }
-
-    if (this.primary) {
-      doc.style.setProperty("--mdc-theme-primary", this.primary);
-    }
-
-    if (this.secondary) {
-      doc.style.setProperty("--mdc-theme-secondary", this.secondary);
-    }
-
-    if (this.background) {
-      doc.style.setProperty("--mdc-theme-background", this.background);
-    }
-
-    if (this.textOnsurface) {
-      doc.style.setProperty("--mdc-theme-on-surface", this.textOnsurface);
-    }
-
-    if (this.textOnprimary) {
-      doc.style.setProperty("--mdc-theme-on-primary", this.textOnprimary);
-    }
-
-    if (this.textOnsecondary) {
-      doc.style.setProperty("--mdc-theme-on-secondary", this.textOnsecondary);
-    }
+    doIfExists(
+      this,
+      [
+        "surface",
+        "primary",
+        "secondary",
+        "background",
+        "onSurface",
+        "onPrimary",
+        "onSecondary"
+      ],
+      (value, key) => {
+        const k = camelCaseToDash(key);
+        doc.style.setProperty(`--mdc-theme-${k}`, value);
+      }
+    );
   }
 
   render() {
