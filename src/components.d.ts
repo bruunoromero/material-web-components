@@ -175,6 +175,7 @@ declare global {
       'primary': string;
       'secondary': string;
       'surface': string;
+      'textIconOnBackground': string;
     }
   }
 
@@ -204,6 +205,7 @@ declare global {
       'primary'?: string;
       'secondary'?: string;
       'surface'?: string;
+      'textIconOnBackground'?: string;
     }
   }
 }
@@ -428,6 +430,82 @@ declare global {
     export interface MwcIconAttributes extends HTMLAttributes {
       'href'?: string;
       'name'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcListItemText {
+      'primary': boolean;
+      'secondary': boolean;
+    }
+  }
+
+  interface HTMLMwcListItemTextElement extends StencilComponents.MwcListItemText, HTMLStencilElement {}
+
+  var HTMLMwcListItemTextElement: {
+    prototype: HTMLMwcListItemTextElement;
+    new (): HTMLMwcListItemTextElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-list-item-text': HTMLMwcListItemTextElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-list-item-text': HTMLMwcListItemTextElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-list-item-text': JSXElements.MwcListItemTextAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListItemTextAttributes extends HTMLAttributes {
+      'primary'?: boolean;
+      'secondary'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcListItem {
+      'href': string;
+      'leadingIcon': string;
+      'ripple': boolean;
+      'tag': string;
+      'trailingIcon': string;
+    }
+  }
+
+  interface HTMLMwcListItemElement extends StencilComponents.MwcListItem, HTMLStencilElement {}
+
+  var HTMLMwcListItemElement: {
+    prototype: HTMLMwcListItemElement;
+    new (): HTMLMwcListItemElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-list-item': HTMLMwcListItemElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-list-item': HTMLMwcListItemElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-list-item': JSXElements.MwcListItemAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListItemAttributes extends HTMLAttributes {
+      'href'?: string;
+      'leadingIcon'?: string;
+      'ripple'?: boolean;
+      'tag'?: string;
+      'trailingIcon'?: string;
     }
   }
 }

@@ -1,0 +1,13 @@
+mwc-list-item {
+  .mwc-leading-icon {
+    margin-right: 32px;
+  }
+
+  .mwc-trailing-icon {
+    margin-left: auto;
+  }
+
+  .material-icons {
+    color: var(--mdc-theme-text-icon-on-background);
+  }
+}

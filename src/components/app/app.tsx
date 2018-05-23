@@ -15,6 +15,7 @@ export class App {
   @Prop() onPrimary: string;
   @Prop() background: string;
   @Prop() onSecondary: string;
+  @Prop() textIconOnBackground: string;
 
   @Element() el: HTMLElement;
 
@@ -40,7 +41,8 @@ export class App {
         "background",
         "onSurface",
         "onPrimary",
-        "onSecondary"
+        "onSecondary",
+        "textIconOnBackground"
       ],
       (value, key) => {
         const k = camelCaseToDash(key);

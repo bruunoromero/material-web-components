@@ -21,6 +21,9 @@ exports.config = {
     },
     {
       components: ["mwc-card", "mwc-card-actions", "mwc-card-buttons"]
+    },
+    {
+      components: ["mwc-list", "mwc-list-item", "mwc-list-item-text"]
     }
   ],
   outputTargets: [

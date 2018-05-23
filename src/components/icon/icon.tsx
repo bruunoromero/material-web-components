@@ -2,7 +2,8 @@ import { Component, Prop, Element } from "@stencil/core";
 import { keysToString } from "../../utils/strings";
 
 @Component({
-  tag: "mwc-icon"
+  tag: "mwc-icon",
+  styleUrl: "icon.scss"
 })
 export class Icon {
   @Prop() href: string;

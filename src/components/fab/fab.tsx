@@ -27,7 +27,9 @@ export class Fab {
   }
 
   componentDidUnload() {
-    this.instance.destroy();
+    if (this.instance.destroy) {
+      this.instance.destroy();
+    }
   }
 
   getClasses() {
