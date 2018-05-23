@@ -401,17 +401,89 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface MwcIcon {
+      'href': string;
+      'name': string;
+    }
+  }
+
+  interface HTMLMwcIconElement extends StencilComponents.MwcIcon, HTMLStencilElement {}
+
+  var HTMLMwcIconElement: {
+    prototype: HTMLMwcIconElement;
+    new (): HTMLMwcIconElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-icon': HTMLMwcIconElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-icon': HTMLMwcIconElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-icon': JSXElements.MwcIconAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcIconAttributes extends HTMLAttributes {
+      'href'?: string;
+      'name'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcList {
+
+    }
+  }
+
+  interface HTMLMwcListElement extends StencilComponents.MwcList, HTMLStencilElement {}
+
+  var HTMLMwcListElement: {
+    prototype: HTMLMwcListElement;
+    new (): HTMLMwcListElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-list': HTMLMwcListElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-list': HTMLMwcListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-list': JSXElements.MwcListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface MwcTextField {
       'box': boolean;
       'dense': boolean;
       'disabled': boolean;
       'fullWidth': boolean;
+      'helperText': string;
+      'helperTextPersistent': boolean;
       'id': string;
       'label': string;
+      'leadingIcon': string;
       'outlined': boolean;
       'placeholder': string;
       'ripple': boolean;
       'tag': string;
+      'trailingIcon': string;
       'type': string;
     }
   }
@@ -439,12 +511,16 @@ declare global {
       'dense'?: boolean;
       'disabled'?: boolean;
       'fullWidth'?: boolean;
+      'helperText'?: string;
+      'helperTextPersistent'?: boolean;
       'id'?: string;
       'label'?: string;
+      'leadingIcon'?: string;
       'outlined'?: boolean;
       'placeholder'?: string;
       'ripple'?: boolean;
       'tag'?: string;
+      'trailingIcon'?: string;
       'type'?: string;
     }
   }

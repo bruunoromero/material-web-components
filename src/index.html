@@ -15,21 +15,17 @@
     <mwc-app-bar>
       <mwc-app-bar-row>
         <mwc-app-bar-section>
-          <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">
-            menu
-          </a>
+          <mwc-icon name="menu" href="#"></mwc-icon>
           <mwc-app-bar-title>Title</mdc-app-bar-title>
         </mwc-app-bar-section>
         <mwc-app-bar-section align-end>
-          <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page">
-            bookmark
-          </a>
+          <mwc-icon name="bookmark" href="#"></mwc-icon>
         </mwc-app-bar-section>
       </mwc-app-bar-row>
     </mwc-app-bar>
     <div style="padding-top: 64px">
       <mwc-button raised ripple>Ola</mwc-button>
-      <mwc-text-field label="teste"></mwc-text-field>
+      <mwc-text-field label="label" leading-icon="menu" box helper-text="teste"></mwc-text-field>
       <mwc-card>
         <h1>Ola mundo</h1>
         <mwc-card-actions>
@@ -38,6 +34,9 @@
           </mwc-card-buttons>
         </mwc-card-actions>
       </mwc-card>
+      <mwc-fab>
+        <mwc-icon name="menu"></mwc-icon>
+      </mwc-fab>
     </div>
   </mwc-app>
 </body>

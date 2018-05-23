@@ -2,6 +2,7 @@ import { MDCRipple } from "@material/ripple";
 import { Component, Prop, Element } from "@stencil/core";
 
 import { doIfExists } from "../../utils/context";
+import { keysToString } from "../../utils/strings";
 
 @Component({
   tag: "mwc-button",
@@ -26,12 +27,6 @@ export class Button {
       const element = this.el.querySelector(this.tag);
       this.instance = new MDCRipple(element);
     });
-
-    if (this.el.parentElement.classList.contains("mdc-card__action-buttons")) {
-      this.el
-        .querySelector(this.tag)
-        .classList.add("mdc-card__action", "mdc-card__action--button");
-    }
   }
 
   componentDidUnload() {
@@ -39,17 +34,21 @@ export class Button {
   }
 
   getClasses() {
-    const classes = [];
-
-    doIfExists(
-      this,
-      ["dense", "raised", "outlined", "unelevated"],
-      (_, key) => {
-        classes.push(`mdc-button--${key}`);
-      }
+    const isOnCardAcions = this.el.parentElement.classList.contains(
+      "mdc-card__action-buttons"
     );
 
-    return classes.join(" ");
+    const classes = {
+      "mdc-button": true,
+      "mdc-button--dense": this.dense,
+      "mdc-button--raised": this.raised,
+      "mdc-card__action": isOnCardAcions,
+      "mdc-button--outlined": this.outlined,
+      "mdc-button--unelevated": this.unelevated,
+      "mdc-card__action--button": isOnCardAcions
+    };
+
+    return keysToString(classes);
   }
 
   render() {
@@ -57,7 +56,7 @@ export class Button {
       <this.tag
         href={this.href}
         disabled={this.disabled}
-        class={`mdc-button ${this.getClasses()}`}
+        class={this.getClasses()}
       >
         <slot />
       </this.tag>

@@ -21,6 +21,7 @@
     "@material/button": "^0.35.0",
     "@material/card": "^0.35.0",
     "@material/fab": "^0.35.0",
+    "@material/list": "^0.35.0",
     "@material/ripple": "^0.35.0",
     "@material/textfield": "^0.35.2",
     "@material/theme": "^0.35.0",
