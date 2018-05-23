@@ -27,8 +27,112 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MwcAppBar {
+    interface MwcAppBarRow {
 
+    }
+  }
+
+  interface HTMLMwcAppBarRowElement extends StencilComponents.MwcAppBarRow, HTMLStencilElement {}
+
+  var HTMLMwcAppBarRowElement: {
+    prototype: HTMLMwcAppBarRowElement;
+    new (): HTMLMwcAppBarRowElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-app-bar-row': HTMLMwcAppBarRowElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-app-bar-row': HTMLMwcAppBarRowElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-app-bar-row': JSXElements.MwcAppBarRowAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcAppBarRowAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcAppBarSection {
+      'alignEnd': boolean;
+      'alignStart': boolean;
+    }
+  }
+
+  interface HTMLMwcAppBarSectionElement extends StencilComponents.MwcAppBarSection, HTMLStencilElement {}
+
+  var HTMLMwcAppBarSectionElement: {
+    prototype: HTMLMwcAppBarSectionElement;
+    new (): HTMLMwcAppBarSectionElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-app-bar-section': HTMLMwcAppBarSectionElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-app-bar-section': HTMLMwcAppBarSectionElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-app-bar-section': JSXElements.MwcAppBarSectionAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcAppBarSectionAttributes extends HTMLAttributes {
+      'alignEnd'?: boolean;
+      'alignStart'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcAppBarTitle {
+
+    }
+  }
+
+  interface HTMLMwcAppBarTitleElement extends StencilComponents.MwcAppBarTitle, HTMLStencilElement {}
+
+  var HTMLMwcAppBarTitleElement: {
+    prototype: HTMLMwcAppBarTitleElement;
+    new (): HTMLMwcAppBarTitleElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-app-bar-title': HTMLMwcAppBarTitleElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-app-bar-title': HTMLMwcAppBarTitleElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-app-bar-title': JSXElements.MwcAppBarTitleAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcAppBarTitleAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcAppBar {
+      'fixed': boolean;
+      'prominent': boolean;
+      'short': boolean;
+      'shortCollapsed': boolean;
     }
   }
 
@@ -51,7 +155,10 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcAppBarAttributes extends HTMLAttributes {
-
+      'fixed'?: boolean;
+      'prominent'?: boolean;
+      'short'?: boolean;
+      'shortCollapsed'?: boolean;
     }
   }
 }

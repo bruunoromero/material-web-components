@@ -24,21 +24,27 @@ export class TextField {
 
   instance: MDCTextField;
 
-  hostData() {
-    return {
-      class: {
-        "mdc-text-field": true,
-        "mdc-text-field--box": this.box,
-        "mdc-text-field--dense": this.dense,
-        "mdc-text-field--outlined": this.outlined,
-        "mdc-text-field--fullwidth": this.fullWidth,
-        "mdc-text-field--textarea": this.tag.toLowerCase() === "textarea"
-      }
+  getClasses(): string {
+    const classes = {
+      "mdc-text-field": true,
+      "mdc-text-field--box": this.box,
+      "mdc-text-field--dense": this.dense,
+      "mdc-text-field--outlined": this.outlined,
+      "mdc-text-field--fullwidth": this.fullWidth,
+      "mdc-text-field--textarea": this.tag.toLowerCase() === "textarea"
     };
+
+    return Object.keys(classes)
+      .filter(key => classes[key])
+      .join(" ");
   }
 
   componentDidLoad() {
-    this.instance = new MDCTextField(this.el);
+    this.instance = new MDCTextField(this.el.querySelector(".mdc-text-field"));
+  }
+
+  componentDidUnload() {
+    this.instance.destroy();
   }
 
   onFocus = () => {
@@ -57,7 +63,7 @@ export class TextField {
 
   render() {
     return (
-      <slot>
+      <div class={this.getClasses()}>
         <this.tag
           id={this.id}
           type={this.type}
@@ -71,8 +77,16 @@ export class TextField {
             {this.label}
           </label>
         )}
-        {this.ripple && <div class="mdc-line-ripple" />}
-      </slot>
+        {this.outlined && (
+          <div class="mdc-notched-outline">
+            <svg>
+              <path class="mdc-notched-outline__path" />
+            </svg>
+          </div>
+        )}
+        {this.outlined && <div class="mdc-notched-outline__idle" />}
+        {!this.outlined && this.ripple && <div class="mdc-line-ripple" />}
+      </div>
     );
   }
 }

@@ -5,7 +5,7 @@ import { camelCaseToDash } from "../../utils/strings";
 
 @Component({
   tag: "mwc-app",
-  styleUrl: "mwc-app.scss"
+  styleUrl: "app.scss"
 })
 export class App {
   @Prop() surface: string;

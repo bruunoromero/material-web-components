@@ -5,22 +5,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="/build/mwc.js"></script>
 
 </head>
 
 <body>
   <mwc-app background="#f2f2f2">
-    <mwc-button raised ripple>Ola</mwc-button>
-    <mwc-text-field label="teste"></mwc-text-field>
-    <mwc-card>
-      <h1>Ola mundo</h1>
-      <mwc-card-actions>
-        <mwc-card-buttons>
-          <mwc-button>Ola</mwc-button>
-        </mwc-card-buttons>
-      </mwc-card-actions>
-    </mwc-card>
+    <mwc-app-bar>
+      <mwc-app-bar-row>
+        <mwc-app-bar-section>
+          <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">
+            menu
+          </a>
+          <mwc-app-bar-title>Title</mdc-app-bar-title>
+        </mwc-app-bar-section>
+        <mwc-app-bar-section align-end>
+          <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page">
+            bookmark
+          </a>
+        </mwc-app-bar-section>
+      </mwc-app-bar-row>
+    </mwc-app-bar>
+    <div style="padding-top: 64px">
+      <mwc-button raised ripple>Ola</mwc-button>
+      <mwc-text-field label="teste"></mwc-text-field>
+      <mwc-card>
+        <h1>Ola mundo</h1>
+        <mwc-card-actions>
+          <mwc-card-buttons>
+            <mwc-button>Ola</mwc-button>
+          </mwc-card-buttons>
+        </mwc-card-actions>
+      </mwc-card>
+    </div>
   </mwc-app>
 </body>
 

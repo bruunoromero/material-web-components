@@ -10,6 +10,19 @@ exports.config = {
       )
     })
   ],
+  bundles: [
+    {
+      components: [
+        "mwc-app-bar",
+        "mwc-app-bar-row",
+        "mwc-app-bar-title",
+        "mwc-app-bar-section"
+      ]
+    },
+    {
+      components: ["mwc-card", "mwc-card-actions", "mwc-card-buttons"]
+    }
+  ],
   outputTargets: [
     {
       type: "dist"

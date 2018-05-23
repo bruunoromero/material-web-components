@@ -5,22 +5,29 @@ import { doIfExists } from "../../utils/context";
 
 @Component({
   tag: "mwc-fab",
-  styleUrl: "mwc-fab.scss"
+  styleUrl: "fab.scss"
 })
 export class Fab {
+  @Element() el: HTMLElement;
+
   @Prop() href: string;
   @Prop() tag = "button";
   @Prop() mini: boolean;
   @Prop() ripple: boolean;
   @Prop() exited: boolean;
   @Prop() disabled: boolean;
-  @Element() el: HTMLElement;
+
+  instance: MDCRipple;
 
   componentDidLoad() {
     doIfExists(this, ["ripple"], () => {
       const element = this.el.querySelector(this.tag);
-      new MDCRipple(element);
+      this.instance = new MDCRipple(element);
     });
+  }
+
+  componentDidUnload() {
+    this.instance.destroy();
   }
 
   getClasses() {

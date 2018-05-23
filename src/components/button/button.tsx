@@ -5,9 +5,11 @@ import { doIfExists } from "../../utils/context";
 
 @Component({
   tag: "mwc-button",
-  styleUrl: "mwc-button.scss"
+  styleUrl: "button.scss"
 })
 export class Button {
+  @Element() el: HTMLElement;
+
   @Prop() href: string;
   @Prop() tag = "button";
   @Prop() dense: boolean;
@@ -16,12 +18,13 @@ export class Button {
   @Prop() disabled: boolean;
   @Prop() outlined: boolean;
   @Prop() unelevated: boolean;
-  @Element() el: HTMLElement;
+
+  instance: MDCRipple;
 
   componentDidLoad() {
     doIfExists(this, ["ripple"], () => {
       const element = this.el.querySelector(this.tag);
-      new MDCRipple(element);
+      this.instance = new MDCRipple(element);
     });
 
     if (this.el.parentElement.classList.contains("mdc-card__action-buttons")) {
@@ -29,6 +32,10 @@ export class Button {
         .querySelector(this.tag)
         .classList.add("mdc-card__action", "mdc-card__action--button");
     }
+  }
+
+  componentDidUnload() {
+    this.instance.destroy();
   }
 
   getClasses() {
