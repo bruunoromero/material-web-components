@@ -23,7 +23,14 @@ exports.config = {
       components: ["mwc-card", "mwc-card-actions", "mwc-card-buttons"]
     },
     {
-      components: ["mwc-list", "mwc-list-item", "mwc-list-item-text"]
+      components: [
+        "mwc-list",
+        "mwc-list-item",
+        "mwc-list-group",
+        "mwc-list-divider",
+        "mwc-list-item-text",
+        "mwc-list-group-subheader"
+      ]
     }
   ],
   outputTargets: [

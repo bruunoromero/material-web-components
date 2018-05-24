@@ -438,6 +438,105 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface MwcListDivider {
+
+    }
+  }
+
+  interface HTMLMwcListDividerElement extends StencilComponents.MwcListDivider, HTMLStencilElement {}
+
+  var HTMLMwcListDividerElement: {
+    prototype: HTMLMwcListDividerElement;
+    new (): HTMLMwcListDividerElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-list-divider': HTMLMwcListDividerElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-list-divider': HTMLMwcListDividerElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-list-divider': JSXElements.MwcListDividerAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListDividerAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcListGroupSubheader {
+
+    }
+  }
+
+  interface HTMLMwcListGroupSubheaderElement extends StencilComponents.MwcListGroupSubheader, HTMLStencilElement {}
+
+  var HTMLMwcListGroupSubheaderElement: {
+    prototype: HTMLMwcListGroupSubheaderElement;
+    new (): HTMLMwcListGroupSubheaderElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-list-group-subheader': HTMLMwcListGroupSubheaderElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-list-group-subheader': HTMLMwcListGroupSubheaderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-list-group-subheader': JSXElements.MwcListGroupSubheaderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListGroupSubheaderAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcListGroup {
+
+    }
+  }
+
+  interface HTMLMwcListGroupElement extends StencilComponents.MwcListGroup, HTMLStencilElement {}
+
+  var HTMLMwcListGroupElement: {
+    prototype: HTMLMwcListGroupElement;
+    new (): HTMLMwcListGroupElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-list-group': HTMLMwcListGroupElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-list-group': HTMLMwcListGroupElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-list-group': JSXElements.MwcListGroupAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcListGroupAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface MwcListItemText {
       'primary': boolean;
       'secondary': boolean;
@@ -474,9 +573,12 @@ declare global {
 
   namespace StencilComponents {
     interface MwcListItem {
+      'activated': boolean;
       'href': string;
       'leadingIcon': string;
+      'multiline': boolean;
       'ripple': boolean;
+      'selected': boolean;
       'tag': string;
       'trailingIcon': string;
     }
@@ -501,9 +603,12 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcListItemAttributes extends HTMLAttributes {
+      'activated'?: boolean;
       'href'?: string;
       'leadingIcon'?: string;
+      'multiline'?: boolean;
       'ripple'?: boolean;
+      'selected'?: boolean;
       'tag'?: string;
       'trailingIcon'?: string;
     }
@@ -515,7 +620,7 @@ declare global {
 
   namespace StencilComponents {
     interface MwcList {
-
+      'dense': boolean;
     }
   }
 
@@ -538,7 +643,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcListAttributes extends HTMLAttributes {
-
+      'dense'?: boolean;
     }
   }
 }
