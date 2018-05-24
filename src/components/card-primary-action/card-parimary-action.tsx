@@ -1,13 +1,13 @@
 import { Component } from "@stencil/core";
 
 @Component({
-  tag: "mwc-card-buttons"
+  tag: "mwc-card-primary-action"
 })
-export class CardButtons {
+export class CardPrimaryAction {
   hostData() {
     return {
       class: {
-        "mdc-card__action-buttons": true
+        "mdc-card__primary-action": true
       }
     };
   }

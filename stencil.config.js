@@ -20,7 +20,14 @@ exports.config = {
       ]
     },
     {
-      components: ["mwc-card", "mwc-card-actions", "mwc-card-buttons"]
+      components: [
+        "mwc-card",
+        "mwc-card-media",
+        "mwc-card-actions",
+        "mwc-card-buttons",
+        "mwc-card-media-content",
+        "mwc-card-primary-action"
+      ]
     },
     {
       components: [

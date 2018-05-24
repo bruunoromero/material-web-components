@@ -262,7 +262,7 @@ declare global {
 
   namespace StencilComponents {
     interface MwcCardActions {
-
+      'fullBleed': boolean;
     }
   }
 
@@ -285,7 +285,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcCardActionsAttributes extends HTMLAttributes {
-
+      'fullBleed'?: boolean;
     }
   }
 }
@@ -318,6 +318,107 @@ declare global {
   }
   namespace JSXElements {
     export interface MwcCardButtonsAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcCardMediaContent {
+
+    }
+  }
+
+  interface HTMLMwcCardMediaContentElement extends StencilComponents.MwcCardMediaContent, HTMLStencilElement {}
+
+  var HTMLMwcCardMediaContentElement: {
+    prototype: HTMLMwcCardMediaContentElement;
+    new (): HTMLMwcCardMediaContentElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-card-media-content': HTMLMwcCardMediaContentElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-card-media-content': HTMLMwcCardMediaContentElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-card-media-content': JSXElements.MwcCardMediaContentAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardMediaContentAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcCardMedia {
+      'sexteenByNine': boolean;
+      'square': boolean;
+    }
+  }
+
+  interface HTMLMwcCardMediaElement extends StencilComponents.MwcCardMedia, HTMLStencilElement {}
+
+  var HTMLMwcCardMediaElement: {
+    prototype: HTMLMwcCardMediaElement;
+    new (): HTMLMwcCardMediaElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-card-media': HTMLMwcCardMediaElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-card-media': HTMLMwcCardMediaElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-card-media': JSXElements.MwcCardMediaAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardMediaAttributes extends HTMLAttributes {
+      'sexteenByNine'?: boolean;
+      'square'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MwcCardPrimaryAction {
+
+    }
+  }
+
+  interface HTMLMwcCardPrimaryActionElement extends StencilComponents.MwcCardPrimaryAction, HTMLStencilElement {}
+
+  var HTMLMwcCardPrimaryActionElement: {
+    prototype: HTMLMwcCardPrimaryActionElement;
+    new (): HTMLMwcCardPrimaryActionElement;
+  };
+  interface HTMLElementTagNameMap {
+    'mwc-card-primary-action': HTMLMwcCardPrimaryActionElement;
+  }
+  interface ElementTagNameMap {
+    'mwc-card-primary-action': HTMLMwcCardPrimaryActionElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'mwc-card-primary-action': JSXElements.MwcCardPrimaryActionAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MwcCardPrimaryActionAttributes extends HTMLAttributes {
 
     }
   }

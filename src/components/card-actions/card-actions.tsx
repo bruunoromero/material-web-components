@@ -1,13 +1,16 @@
-import { Component } from "@stencil/core";
+import { Component, Prop } from "@stencil/core";
 
 @Component({
-  tag: "mwc-card-actions",
+  tag: "mwc-card-actions"
 })
-export class Card {
+export class CardActions {
+  @Prop() fullBleed: boolean;
+
   hostData() {
     return {
       class: {
-        "mdc-card__actions": true
+        "mdc-card__actions": true,
+        "mdc-card__full-bleed": this.fullBleed
       }
     };
   }

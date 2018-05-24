@@ -25,6 +25,7 @@ export class Icon {
     const classes = {
       "material-icons": true,
       "mdc-text-field__icon": classList.contains("mdc-text-field"),
+      "mdc-card__action-item": classList.contains("mdc-card__action-icons"),
       "mdc-top-app-bar__action-item": classList.contains(
         "mdc-top-app-bar__section"
       )
